@@ -34,23 +34,20 @@ services:
       # These automatically populate connection details 
       # for the Render Postgres database defined below
       - key: DB_TYPE
-        value: postgresdb
-      - key: DB_POSTGRESDB_DATABASE
-        fromDatabase:
-          name: n8n-db
-          property: database
+        value: postgres
       - key: DB_POSTGRESDB_HOST
-        fromDatabase:
-          name: n8n-db
-          property: host
-      - key: DB_POSTGRESDB_PASSWORD
-        fromDatabase:
-          name: n8n-db
-          property: password
+        value: n8n-thofatechnologies-hrm.b.aivencloud.com
+      - key: DB_POSTGRESDB_PORT
+        value: '13676'
+      - key: DB_POSTGRESDB_DATABASE
+        value: defaultdb
       - key: DB_POSTGRESDB_USER
-        fromDatabase:
-          name: n8n-db
-          property: user
+        value: avnadmin
+      - key: DB_POSTGRESDB_PASSWORD
+        value: AVNS_9TwJr5vWhCaAK4Se_WW
+      - key: DB_POSTGRESDB_SSL
+        value: 'true'
+
 
 databases:
   - name: n8n-db
